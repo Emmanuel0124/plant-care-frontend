@@ -4,6 +4,7 @@ import { PlantsIndex } from "./PlantsIndex";
 import { PlantsNew } from "./PlantsNew";
 import { Modal } from "./Modal";
 import { PlantsShow } from "./PlantsShow";
+import { Signup } from "./Signup";
 
 export function Content() {
 
@@ -43,6 +44,7 @@ export function Content() {
   
   return (
     <div>
+      <Signup />
       <PlantsNew onCreatePlant={handleCreatePlant} />
       <PlantsIndex plants={plants} onShowPlant={handleShowPlant} />
       <Modal show={isPlantsShowVisible} onClose={handleClose} >
