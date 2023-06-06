@@ -8,6 +8,7 @@ export function PlantsIndex(props) {
           <p>Description: {plant.description}</p>
           <p>Amount of sun: {plant.amount_of_sun}</p>
           <p>Days to water: {plant.days_to_water}</p>
+          <button onClick={() => props.onShowPlant(plant)}>More Info</button>
         </div>
       ))}
     </div>
