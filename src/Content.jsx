@@ -6,6 +6,8 @@ import { Modal } from "./Modal";
 import { PlantsShow } from "./PlantsShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { Routes, Route } from "react-router-dom";
+import { About } from "./About";
 
 export function Content() {
 
@@ -45,9 +47,15 @@ export function Content() {
   
   return (
     <div>
-      <Signup />
-      <Login />
-      <PlantsNew onCreatePlant={handleCreatePlant} />
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/plants/new" element={<PlantsNew onCreatePlant={handleCreatePlant} />} />
+      </Routes>
+
+
+
       <PlantsIndex plants={plants} onShowPlant={handleShowPlant} />
       <Modal show={isPlantsShowVisible} onClose={handleClose} >
         <PlantsShow plant={currentPlant} />
