@@ -52,11 +52,12 @@ export function Content() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/plants/new" element={<PlantsNew onCreatePlant={handleCreatePlant} />} />
+        <Route path="/" element={<PlantsIndex plants={plants} onShowPlant={handleShowPlant} />} />
       </Routes>
 
 
 
-      <PlantsIndex plants={plants} onShowPlant={handleShowPlant} />
+      
       <Modal show={isPlantsShowVisible} onClose={handleClose} >
         <PlantsShow plant={currentPlant} />
       </Modal>
