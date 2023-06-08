@@ -17,8 +17,7 @@ export function Content() {
   const [currentPlant, setCurrentPlant] = useState({});
 
   const [schedules, setSchedules] = useState([]);
-  const [isSchedulesShowVisible, setIsSchedulesShowVisible] = useState(false);
-  const [currentSchedule, setCurrentSchedule] = useState({});
+  
 
   const handleIndexSchedules = () => {
     console.log("handleIndexSchedules");
@@ -28,16 +27,7 @@ export function Content() {
     });
   };
 
-  const handleShowSchedule = (schedule) => {
-    console.log("handleShowSchedule", schedule);
-    setIsSchedulesShowVisible(true);
-    setCurrentSchedule(schedule);
-  };
-
-  const handleClose2 = () => {
-    console.log("handleClose");
-    setIsSchedulesShowVisible(false);
-  };
+  
   
   useEffect(() => { handleIndexSchedules(); }, []);
 
@@ -84,7 +74,7 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route path="/plants/new" element={<PlantsNew onCreatePlant={handleCreatePlant} />} />
         <Route path="/" element={<PlantsIndex plants={plants} onShowPlant={handleShowPlant} />} />
-        <Route path="/schedules" element={<SchedulesIndex schedules={schedules} onShowSchedule={handleShowSchedule} /> } />
+        <Route path="/schedules" element={<SchedulesIndex schedules={schedules}  /> } />
       </Routes>
 
 
