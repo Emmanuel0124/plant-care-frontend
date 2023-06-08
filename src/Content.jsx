@@ -8,12 +8,39 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./About";
+import { Modal2 } from "./Modal2";
+import { SchedulesIndex } from "./SchedulesIndex";
 
 export function Content() {
 
   const [plants, setPlants] = useState([]);
   const [isPlantsShowVisible, setIsPlantsShowVisible] = useState(false);
   const [currentPlant, setCurrentPlant] = useState({});
+
+  const [schedules, setSchedules] = useState([]);
+  const [isSchedulesShowVisible, setIsSchedulesShowVisible] = useState(false);
+  const [currentSchedule, setCurrentSchedule] = useState({});
+
+  const handleIndexSchedules = () => {
+    console.log("handleIndexSchedules");
+    axios.get("http//localhost:3000/schedules.json").then((response) => {
+      console.log(response.data);
+      setSchedules(response.data);
+    });
+  };
+
+  const handleShowSchedule = (schedule) => {
+    console.log("handleShowSchedule", schedule);
+    setIsSchedulesShowVisible(true);
+    setCurrentSchedule(schedule);
+  };
+
+  const handleClose2 = () => {
+    console.log("handleClose");
+    setIsSchedulesShowVisible(false);
+  };
+  
+  useEffect(handleIndexSchedules, []);
 
   const handleIndexPlants = () => {
     console.log("handleIndexPlants");
@@ -47,6 +74,13 @@ export function Content() {
   
   return (
     <div>
+      <SchedulesIndex schedules={schedules} onShowSchedule={handleShowSchedule} />
+
+      <Modal2 show={isSchedulesShowVisible} onClose={handleClose2} >
+        <h1>test</h1>
+      </Modal2>
+
+
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
@@ -54,7 +88,6 @@ export function Content() {
         <Route path="/plants/new" element={<PlantsNew onCreatePlant={handleCreatePlant} />} />
         <Route path="/" element={<PlantsIndex plants={plants} onShowPlant={handleShowPlant} />} />
       </Routes>
-
 
 
       
