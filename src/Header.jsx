@@ -1,5 +1,6 @@
 import { LogoutLink } from "./LogoutLink";
-
+import React from "react";
+import './header.css'; 
 
 export function Header() {
   return(
@@ -10,7 +11,7 @@ export function Header() {
         <a className="nav-link disabled">Plant Reminder</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">Home</a>
+        <a className="nav-link" aria-current="page" href="/">Home</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/Login">Login</a>
