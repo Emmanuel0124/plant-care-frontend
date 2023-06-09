@@ -1,13 +1,18 @@
+import React from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
+
 export function SchedulesIndex(props) {
   return (
     <div>
-      <h1> all schedules </h1>
+      <h1>All Schedules</h1>
       {props.schedules.map((schedule) => (
         <div key={schedule.id}>
-          <h2>{schedule.watering_start_date} </h2>
-          <h2>{schedule.plant_id} </h2>
-          <img src={schedule.image_url} />
-
+          
+          <h2>plant name: {schedule.plant_id}</h2>
+          
+          <Calendar value={new Date(schedule.watering_start_date)} />
         </div>
       ))}
     </div>
