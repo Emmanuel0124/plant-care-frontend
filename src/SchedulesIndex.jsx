@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 
 export function SchedulesIndex(props) {
   return (
-    <div>
+    <div className="container">
       <h1>All Schedules</h1>
       {props.schedules.map((schedule) => (
         <div key={schedule.id}>
