@@ -22,7 +22,7 @@ export function Signup() {
   };
 
   return (
-    <div id="signup">
+    <div id="signup" className="container" >
       <h1>Signup</h1>
       <ul>
         {errors.map((error) => (
