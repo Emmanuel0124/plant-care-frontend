@@ -1,0 +1,50 @@
+/* PlantsNew.css */
+
+.plant-form {
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+.container .plant-form {
+  margin-top: 30px;
+}
+
+.container .form-group {
+  margin-bottom: 20px;
+}
+
+.container .form-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.container .submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #498716b6;
+  color: #c8d120;
+  border: none;
+}
+
+.container .signup-button {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #498716b6;
+  color: #c8d120;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
