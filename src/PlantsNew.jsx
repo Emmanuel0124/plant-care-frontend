@@ -21,6 +21,9 @@ export function PlantsNew(props) {
       <div>
         days to water: <input name="days_to_water" type="text" />
       </div>
+      <div>
+        image url: <input name="image_url" type="text" />
+      </div>
       <button type="submit">Create Plant</button>
     </form>
   </div>
