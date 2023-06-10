@@ -11,9 +11,7 @@ export function PlantsIndex(props) {
             <div className="card">
               <div className="card-body">
                 <h2 className="card-title">{plant.name}</h2>
-                <p className="card-text">Description: {plant.description}</p>
-                <p className="card-text">Amount of sun: {plant.amount_of_sun}</p>
-                <p className="card-text">Days to water: {plant.days_to_water}</p>
+                <img src={plant.image_url} />
                 <button
                   className="btn btn-outline-success"
                   onClick={() => props.onShowPlant(plant)}
