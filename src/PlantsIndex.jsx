@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import "./PlantIndex.css";
 
 export function PlantsIndex(props) {
   return (
