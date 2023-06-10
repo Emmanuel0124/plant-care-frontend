@@ -17,9 +17,7 @@ export function PlantsIndex(props) {
                 <img src={plant.image_url} />
                 <button
                   className="btn btn-outline-success"
-                  onClick={() => props.onShowPlant(plant)}
-                >
-                  More Info
+                  onClick={() => props.onShowPlant(plant)}> More Info
                 </button>
               </div>
             </div>
