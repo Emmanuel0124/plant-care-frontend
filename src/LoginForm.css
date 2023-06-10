@@ -21,3 +21,15 @@
   color: #c8d120;
   border: none;
 }
+
+.signup-button {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #498716b6;
+  color: #c8d120;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}

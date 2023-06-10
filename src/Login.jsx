@@ -49,6 +49,7 @@ export function Login() {
         <button type="submit" className="submit-button">
           Login
         </button>
+        <a href="/signup" className="signup-button">Sign up</a>
       </form>
     </div>
   );
