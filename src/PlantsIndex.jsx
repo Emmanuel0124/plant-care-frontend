@@ -4,7 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 export function PlantsIndex(props) {
   return (
     <div className="container">
-      <h1>All Plants</h1>
+      <h1>Your Plants?</h1>
+      <div className="my-4">
+        <a href="/plants/new" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">New Plant</a>
+      </div>
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {props.plants.map((plant) => (
           <div key={plant.id} className="col">
