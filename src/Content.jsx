@@ -9,6 +9,7 @@ import { Login } from "./Login";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./About";
 import { SchedulesIndex } from "./SchedulesIndex";
+import { SchedulesNew } from "./SchedulesNew";
 
 export function Content() {
 
@@ -69,6 +70,7 @@ export function Content() {
 
 
       <Routes>
+        <Route path="/schedules/new" element={<SchedulesNew />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
