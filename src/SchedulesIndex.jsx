@@ -7,6 +7,7 @@ export function SchedulesIndex(props) {
   return (
     <div className="container">
       <h1>All Schedules</h1>
+      <a href="/schedules/new" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">New Schedule</a>
       {props.schedules.map((schedule) => (
         <div key={schedule.id}>
           
