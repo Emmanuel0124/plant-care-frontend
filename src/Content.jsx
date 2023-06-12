@@ -28,6 +28,14 @@ export function Content() {
     });
   };
 
+  const handleCreateSchedule = (params, successCallback) => {
+    console.log("handleCreateSchedule", params);
+    axios.post("http://localhost:3000/schedules.json", params).then((response) => {
+      setSchedules([...schedules, response.data]);
+      successCallback();
+    });
+  };
+
   
   
   useEffect(() => { handleIndexSchedules(); }, []);
@@ -70,7 +78,7 @@ export function Content() {
 
 
       <Routes>
-        <Route path="/schedules/new" element={<SchedulesNew />} />
+        <Route path="/schedules/new" element={<SchedulesNew onCreateSchedule={handleCreateSchedule} />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
