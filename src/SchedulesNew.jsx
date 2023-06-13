@@ -13,7 +13,7 @@ export function SchedulesNew(props) {
       <h1>New Schedule</h1>
       <form onSubmit={handleSubmit} className="schedule-form">
         <div className="form-group">
-          plant Name: <input name="plant_id" type="text" className="form-input"/>
+          plant Name: <input name="plant" type="text" className="form-input"/>
         </div>
         <div className="form-group">
           watering start date: <input name="watering_start_date" type="text" className="form-input" />
