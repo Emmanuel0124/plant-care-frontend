@@ -11,7 +11,7 @@ export function SchedulesIndex(props) {
       <a href="/schedules/new" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">New Schedule</a>
       {props.schedules.map((schedule) => (
         <div className="schedule-item" key={schedule.id}>
-          <h2>plant name: {schedule.plant_id}</h2>
+          <h2>plant name: {schedule.plant.name}</h2>
           <Calendar className="react-calendar" value={new Date(schedule.watering_start_date)} />
           <hr />
         </div>
