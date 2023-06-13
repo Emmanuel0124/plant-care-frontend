@@ -18,9 +18,6 @@ export function SchedulesNew(props) {
         <div className="form-group">
           watering start date: <input name="watering_start_date" type="text" className="form-input" />
         </div>
-        <div className="form-group">
-          User name: <input name="user_id"type="text" className="form-input" />
-        </div>
         <button type="submit" className="submit-button">Create schedule</button>
       </form>
     </div>
