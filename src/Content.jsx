@@ -21,15 +21,12 @@ export function Content() {
   
 
   const handleIndexSchedules = () => {
-    console.log("handleIndexSchedules");
     axios.get("http://localhost:3000/schedules.json").then((response) => {
-      console.log(response.data);
       setSchedules(response.data);
     });
   };
 
   const handleCreateSchedule = (params, successCallback) => {
-    console.log("handleCreateSchedule", params);
     axios.post("http://localhost:3000/schedules.json", params).then((response) => {
       setSchedules([...schedules, response.data]);
       successCallback();
@@ -41,15 +38,12 @@ export function Content() {
   useEffect(() => { handleIndexSchedules(); }, []);
 
   const handleIndexPlants = () => {
-    console.log("handleIndexPlants");
     axios.get("http://localhost:3000/plants.json").then((response) => {
-      console.log(response.data);
       setPlants(response.data);
     });
   };
 
   const handleCreatePlant = (params, successCallback) => {
-    console.log("handleCreatePlant", params);
     axios.post("http://localhost:3000/plants.json", params).then((response) => {
       setPlants([...plants, response.data]);
       successCallback();
@@ -57,13 +51,11 @@ export function Content() {
   };
   
   const handleShowPlant = (plant) => {
-    console.log("handleShowPlant", plant);
     setIsPlantsShowVisible(true);
     setCurrentPlant(plant);
   };
 
   const handleClose = () => {
-    console.log("handleClose");
     setIsPlantsShowVisible(false);
   };
 
